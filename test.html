@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @media only screen and (max-width: 1100px) {
+        .global-container {
+          width: 100% !important;
+        }
+      }
+      /* Add any additional styles here */
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        width: 1100px;
+        margin: auto;
+        border: 3px solid #1434cb;
+        box-shadow: 0px 0px 6px 0px #00000029;
+        padding: 0 0 20px;
+      "
+      class="global-container"
+    >
+      <div
+        style="
+          overflow: hidden;
+          background: #ffffff;
+          background-color: #1434cb;
+          justify-content: center;
+          align-items: center;
+          padding: 37px 145px;
+          position: relative;
+          box-sizing: border-box;
+          padding: 16px 16px 42px;
+        "
+        class="wildfire-offer-container"
+      >
+        <!-- Add your dynamic content here -->
+        <div class="wildfire-offer-wall" appid="39" uuid="39" deviceid="111-222-333" type="BANNER"></div>
+      </div>
+      <div style="padding: 25px 20px 15px">
+        <div style="font-weight: 600; font-size: 22px">Featured</div>
+      </div>
+      <div class="wildfire-offer-wall" appid="39" uuid="39" deviceid="111-222-333" type="LOGO"></div>
+      <div style="padding: 40px 20px 15px">
+        <div style="font-weight: 600; font-size: 22px">Top Offers</div>
+      </div>
+      <div class="wildfire-offer-wall" appid="39" uuid="39" deviceid="111-222-333" type="TILE"></div>
+    </div>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/thangle411/cdn-test/test1.js"></script>
+    <script>
+      setTimeout(() => {
+        const wildfireOffers = new window['WildfireOffers']();
+        wildfireOffers.init();
+      }, 100);
+    </script>
+  </body>
+</html>
