@@ -12827,7 +12827,7 @@ function print() { __p += __j.call(arguments, '') }
         showExclamation: e.sponsored,
         children: M.jsxs('div', {
           style: { ...Li.container },
-          className: 'wildfire-offer-background',
+          className: 'wildfire-offer-card',
           onClick: () => {
             n(e), t(!0), i(e.rateDescription);
           },
@@ -12957,7 +12957,7 @@ function print() { __p += __j.call(arguments, '') }
         showExclamation: e.sponsored,
         children: M.jsxs('div', {
           style: { ...Qn.container },
-          className: 'wildfire-offer-background',
+          className: 'wildfire-offer-card',
           onClick: () => {
             n(e), t(!0), i(e.rateDescription);
           },
@@ -16455,10 +16455,13 @@ Arguments: ` +
             font-family: "Poppins", sans-serif;
           }
           .wildfire-offer-button {
-            background-color: pink !important
+            background-color: pink !important;
+            color: red !important;
+            border-radius: 20px
           }
-          .wildfire-offer-background {
-            background-color: neon !important
+          .wildfire-offer-card {
+            background-color: yellow !important;
+            border-radius: 10px !important
           }
           @media only screen and (max-width: 1100px) {
             .global-container {
@@ -16583,6 +16586,7 @@ Arguments: ` +
         showExclamation: e.sponsored,
         children: M.jsxs('div', {
           style: { ...Wi.banner, ...c() },
+          className: 'wildfire-offer-card',
           children: [
             M.jsx('div', {
               style: {
