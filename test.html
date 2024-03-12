@@ -3,57 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @media only screen and (max-width: 1100px) {
-        .global-container {
-          width: 100% !important;
-        }
-      }
-      /* Add any additional styles here */
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div
-      style="
-        width: 1100px;
-        margin: auto;
-        border: 3px solid #1434cb;
-        box-shadow: 0px 0px 6px 0px #00000029;
-        padding: 0 0 20px;
-      "
-      class="global-container"
-    >
+    <div>
+      <style>
+        * {
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        body {
+          margin: 0;
+          padding: 0 0 40px 0;
+          box-sizing: border-box;
+        }
+        .footer-container {
+          display: flex;
+          padding: 50px 50px;
+          margin-top: 50px;
+          gap: 50px;
+          color: #5c5c5c;
+          background: #f7f7f7;
+          width: 1100px;
+          margin: auto;
+        }
+        .footer-logo {
+        }
+        .footer-content {
+          display: flex;
+          flex: 1;
+          justify-content: space-around;
+        }
+        .footer-column {
+          display: grid;
+          gap: 5px;
+          align-content: flex-start;
+        }
+        .footer-header {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        .footer-link {
+          height: fit-content;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .footer-link:hover {
+          color: #1434cb;
+        }
+        .wildfire-offer {
+          font-family: 'Poppins', sans-serif;
+        }
+        .wildfire-offer-description {
+        }
+        .wildfire-offer-button {
+          background-color: pink !important;
+          /* color: red !important; */
+          /* border-radius: 20px */
+        }
+        .wildfire-offer-card {
+          /* background-color: yellow !important; */
+          /* border-radius: 10px !important */
+        }
+        @media only screen and (max-width: 1100px) {
+          .global-container {
+            width: 100% !important;
+          }
+          .logo-container {
+            width: 100% !important;
+          }
+          .footer-container {
+            width: 100% !important;
+          }
+        }
+        @media only screen and (max-width: 650px) {
+          .banner-container {
+            padding: 16px 16px 42px !important;
+          }
+          .footer-container {
+            flex-direction: column;
+          }
+          .footer-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+          }
+        }
+      </style>
+      <div class="logo-container" style="width: 1100px; margin: auto; padding: 20px 0 40px">
+        <svg width="173" height="56" viewBox="0 0 173 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M65.6177 0.986542L42.9911 54.9709H28.229L17.0944 11.8889C16.4184 9.23533 15.8306 8.26319 13.7747 7.14523C10.4199 5.32427 4.8769 3.61672 0 2.55637L0.331248 0.986542H24.0938C27.1227 0.986542 29.8456 3.00283 30.5333 6.49084L36.4139 37.7289L50.9474 0.986542H65.6177ZM123.459 37.3455C123.519 23.0973 103.757 22.3124 103.893 15.9476C103.935 14.0105 105.78 11.951 109.817 11.4253C111.818 11.1634 117.331 10.9636 123.584 13.8413L126.037 2.39345C122.677 1.17377 118.354 0 112.974 0C99.1709 0 89.4567 7.33786 89.3748 17.8451C89.2857 25.6168 96.3085 29.9536 101.599 32.5361C107.043 35.1807 108.869 36.8801 108.848 39.2457C108.81 42.8669 104.507 44.4655 100.486 44.5285C93.4668 44.6365 89.3937 42.6293 86.1469 41.1197L83.6158 52.9465C86.8787 54.4435 92.9015 55.7495 99.1457 55.8153C113.817 55.8153 123.414 48.5683 123.459 37.3455ZM159.909 54.9718H172.825L161.551 0.986542H149.63C146.949 0.986542 144.688 2.54737 143.687 4.94711L122.731 54.9709H137.395L140.307 46.9067H158.224L159.91 54.9709L159.909 54.9718ZM144.327 35.8432L151.677 15.574L155.908 35.8432H144.328H144.327ZM85.5717 0.986542L74.024 54.9709H60.0594L71.6116 0.986542H85.5717Z"
+            fill="#1434CB"
+          />
+        </svg>
+      </div>
       <div
         style="
-          overflow: hidden;
-          background: #ffffff;
-          background-color: #1434cb;
-          justify-content: center;
-          align-items: center;
-          padding: 37px 145px;
-          position: relative;
-          box-sizing: border-box;
+          width: 1100px;
+          margin: auto;
+          border: 3px solid #1434cb;
+          box-shadow: 0px 0px 6px 0px #00000029;
+          padding: 0 0 20px 0;
         "
-        class="wildfire-offer-container"
+        class="global-container"
       >
-        <!-- Add your dynamic content here -->
-        <div class="wildfire-offer-wall" appid="244" uuid="test-tc" deviceid="22734164" type="BANNER"></div>
+        <div style="display: grid; gap: 30px; padding: 20px">
+          <div style="display: flex; gap: 10px">
+            <div style="display: flex; gap: 10px">
+              <select id="categorySelect" style="width: 200px"></select>
+              <span style="display: none; cursor: pointer" id="close-icon">x</span>
+            </div>
+            <input style="display: none" type="text" id="searchInput" placeholder="Search..." />
+          </div>
+          <div>
+            <div
+              id="category-name"
+              style="display: none; margin-bottom: 10px; font-weight: bold; font-size: 30px"
+            ></div>
+            <div class="wildfire-offer-wall-category"></div>
+          </div>
+        </div>
+
+        <div id="other-part">
+          <div
+            style="
+              overflow: hidden;
+              background: #ffffff;
+              background-color: #1434cb;
+              justify-content: center;
+              align-items: center;
+              padding: 37px 145px;
+              position: relative;
+              box-sizing: border-box;
+            "
+            class="wildfire-offer-container banner-container"
+          >
+            <div
+              class="wildfire-offer-wall"
+              appid="244"
+              uuid="test-tracking-code-offer-wall"
+              deviceid="22734164"
+              type="BANNER"
+            ></div>
+          </div>
+          <div style="padding: 25px 20px 15px">
+            <div style="font-weight: 600; font-size: 22px">Featured</div>
+          </div>
+          <div
+            class="wildfire-offer-wall"
+            appid="244"
+            uuid="test-tracking-code-offer-wall"
+            deviceid="22734164"
+            type="LOGO"
+          ></div>
+          <div style="padding: 40px 20px 15px">
+            <div style="font-weight: 600; font-size: 22px">Top Offers</div>
+          </div>
+          <div
+            class="wildfire-offer-wall"
+            appid="244"
+            uuid="test-tracking-code-offer-wall"
+            deviceid="22734164"
+            type="TILE"
+          ></div>
+        </div>
       </div>
-      <div style="padding: 25px 20px 15px">
-        <div style="font-weight: 600; font-size: 22px">Featured</div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <svg
+            width="173"
+            height="56"
+            viewBox="0 0 173 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="width: 50px"
+          >
+            <path
+              d="M65.6177 0.986542L42.9911 54.9709H28.229L17.0944 11.8889C16.4184 9.23533 15.8306 8.26319 13.7747 7.14523C10.4199 5.32427 4.8769 3.61672 0 2.55637L0.331248 0.986542H24.0938C27.1227 0.986542 29.8456 3.00283 30.5333 6.49084L36.4139 37.7289L50.9474 0.986542H65.6177ZM123.459 37.3455C123.519 23.0973 103.757 22.3124 103.893 15.9476C103.935 14.0105 105.78 11.951 109.817 11.4253C111.818 11.1634 117.331 10.9636 123.584 13.8413L126.037 2.39345C122.677 1.17377 118.354 0 112.974 0C99.1709 0 89.4567 7.33786 89.3748 17.8451C89.2857 25.6168 96.3085 29.9536 101.599 32.5361C107.043 35.1807 108.869 36.8801 108.848 39.2457C108.81 42.8669 104.507 44.4655 100.486 44.5285C93.4668 44.6365 89.3937 42.6293 86.1469 41.1197L83.6158 52.9465C86.8787 54.4435 92.9015 55.7495 99.1457 55.8153C113.817 55.8153 123.414 48.5683 123.459 37.3455ZM159.909 54.9718H172.825L161.551 0.986542H149.63C146.949 0.986542 144.688 2.54737 143.687 4.94711L122.731 54.9709H137.395L140.307 46.9067H158.224L159.91 54.9709L159.909 54.9718ZM144.327 35.8432L151.677 15.574L155.908 35.8432H144.328H144.327ZM85.5717 0.986542L74.024 54.9709H60.0594L71.6116 0.986542H85.5717Z"
+              fill="#1434CB"
+            />
+          </svg>
+        </div>
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-header">About Visa</div>
+            <div class="footer-link">Leading by Example</div>
+            <div class="footer-link">What We Go</div>
+            <div class="footer-link">Careers</div>
+          </div>
+
+          <div class="footer-column">
+            <div class="footer-header">Our Values</div>
+            <div class="footer-link">Social Impact</div>
+            <div class="footer-link">Inclusion + Diversity</div>
+          </div>
+
+          <div class="footer-column">
+            <div class="footer-header">News & Media</div>
+            <div class="footer-link">Visa Blog</div>
+            <div class="footer-link">Newsroom</div>
+          </div>
+        </div>
       </div>
-      <div class="wildfire-offer-wall" appid="244" uuid="test-tc" deviceid="22734164" type="LOGO"></div>
-      <div style="padding: 40px 20px 15px">
-        <div style="font-weight: 600; font-size: 22px">Top Offers</div>
-      </div>
-      <div class="wildfire-offer-wall" appid="244" uuid="test-tc" deviceid="22734164" type="TILE"></div>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/thangle411/cdn-test/kevel-with-category.js"></script>
+      <script>
+        document.getElementById('categorySelect').addEventListener('change', handleChange);
+        document.getElementById('close-icon').addEventListener('click', function () {
+          wildfireOffers.deselectCategory();
+          document.getElementById('searchInput').style.display = 'none';
+          document.getElementById('category-name').style.display = 'none';
+          document.getElementById('close-icon').style.display = 'none';
+          document.getElementById('other-part').style.display = 'block';
+        });
+        document.getElementById('searchInput').addEventListener('input', function (event) {
+          const query = event.target.value;
+          wildfireOffers.searchCategory(query);
+        });
+        let wildfireOffers;
+
+        function handleChange(event) {
+          var selectedCategory = JSON.parse(event.target.value);
+          const el = document.getElementById('category-name');
+          el.innerText = selectedCategory.name;
+          wildfireOffers.selectCategory(selectedCategory);
+          document.getElementById('searchInput').style.display = 'block';
+          document.getElementById('category-name').style.display = 'block';
+          document.getElementById('close-icon').style.display = 'block';
+          document.getElementById('other-part').style.display = 'none';
+        }
+
+        const getCategories = async () => {
+          try {
+            const res = await fetch(
+              'https://storage.googleapis.com/wildlink/local-cloud-db/1/1/offer-wall-category-model/2024-03-06T113754.model.json',
+            );
+
+            const { categories } = await res.json();
+            var selectElement = document.getElementById('categorySelect');
+            selectElement.innerHTML = '';
+            categories.forEach(function (category) {
+              var option = document.createElement('option');
+              option.value = JSON.stringify(category);
+              option.text = category.name;
+              selectElement.appendChild(option);
+            });
+          } catch (error) {
+            console.error('Error fetching categories');
+            return;
+          }
+        };
+        const init = () => {
+          try {
+            const url = new URL(window.location.href);
+            const appID = url.searchParams.get('appID');
+            const uuid = url.searchParams.get('uuid');
+            const deviceID = url.searchParams.get('deviceID');
+
+            const wildfireOffers = new window['WildfireOffers']({
+              appID,
+              uuid,
+              deviceID,
+              options: {
+                banner: {
+                  count: 8,
+                },
+                formatA: {
+                  count: 18,
+                },
+                formatB: {
+                  count: 8,
+                },
+              },
+            });
+            wildfireOffers.init();
+          } catch (error) {
+            console.error(error);
+            setTimeout(() => {
+              init();
+            }, 100);
+          }
+        };
+
+        getCategories();
+        setTimeout(() => {
+          init();
+        }, 100);
+      </script>
     </div>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/thangle411/cdn-test/app-da1f27bf.js"></script>
-    <script>
-      setTimeout(() => {
-        const wildfireOffers = new window['WildfireOffers']();
-        wildfireOffers.init();
-      }, 1000);
-    </script>
   </body>
 </html>
