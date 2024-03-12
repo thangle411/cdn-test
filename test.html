@@ -211,23 +211,31 @@
           </div>
         </div>
       </div>
-      <script type="module" src="https://cdn.jsdelivr.net/gh/thangle411/cdn-test/kevel-with-category.js"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/thangle411/cdn-test/kevel-category-new.js"></script>
       <script>
         document.getElementById('categorySelect').addEventListener('change', handleChange);
-        document.getElementById('close-icon').addEventListener('click', function () {
-          wildfireOffers.deselectCategory();
-          document.getElementById('searchInput').style.display = 'none';
-          document.getElementById('category-name').style.display = 'none';
-          document.getElementById('close-icon').style.display = 'none';
-          document.getElementById('other-part').style.display = 'block';
-        });
+        document.getElementById('close-icon').addEventListener('click', clear);
         document.getElementById('searchInput').addEventListener('input', function (event) {
           const query = event.target.value;
           wildfireOffers.searchCategory(query);
         });
         let wildfireOffers;
 
+        function clear() {
+          if (!wildfireOffers) return;
+          wildfireOffers.deselectCategory();
+          document.getElementById('searchInput').style.display = 'none';
+          document.getElementById('category-name').style.display = 'none';
+          document.getElementById('close-icon').style.display = 'none';
+          document.getElementById('other-part').style.display = 'block';
+          getCategories();
+        }
+
         function handleChange(event) {
+          if (!event.target.value) {
+            clear();
+            return;
+          }
           var selectedCategory = JSON.parse(event.target.value);
           const el = document.getElementById('category-name');
           el.innerText = selectedCategory.name;
@@ -240,13 +248,15 @@
 
         const getCategories = async () => {
           try {
-            const res = await fetch(
-              'https://storage.googleapis.com/wildlink/local-cloud-db/1/1/offer-wall-category-model/2024-03-06T113754.model.json',
-            );
+            const res = await fetch('https://dev-www.wildlink.me/data/1/offer-wall-category/1');
 
             const { categories } = await res.json();
             var selectElement = document.getElementById('categorySelect');
             selectElement.innerHTML = '';
+            const option = document.createElement('option');
+            option.value = '';
+            option.text = 'Select Category';
+            selectElement.appendChild(option);
             categories.forEach(function (category) {
               var option = document.createElement('option');
               option.value = JSON.stringify(category);
@@ -298,3 +308,42 @@
     </div>
   </body>
 </html>
+
+<!-- 
+<div class="footer-container">
+  <div class="footer-logo">
+    <svg
+      width="173"
+      height="56"
+      viewBox="0 0 173 56"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style="width: 50px"
+    >
+      <path
+        d="M65.6177 0.986542L42.9911 54.9709H28.229L17.0944 11.8889C16.4184 9.23533 15.8306 8.26319 13.7747 7.14523C10.4199 5.32427 4.8769 3.61672 0 2.55637L0.331248 0.986542H24.0938C27.1227 0.986542 29.8456 3.00283 30.5333 6.49084L36.4139 37.7289L50.9474 0.986542H65.6177ZM123.459 37.3455C123.519 23.0973 103.757 22.3124 103.893 15.9476C103.935 14.0105 105.78 11.951 109.817 11.4253C111.818 11.1634 117.331 10.9636 123.584 13.8413L126.037 2.39345C122.677 1.17377 118.354 0 112.974 0C99.1709 0 89.4567 7.33786 89.3748 17.8451C89.2857 25.6168 96.3085 29.9536 101.599 32.5361C107.043 35.1807 108.869 36.8801 108.848 39.2457C108.81 42.8669 104.507 44.4655 100.486 44.5285C93.4668 44.6365 89.3937 42.6293 86.1469 41.1197L83.6158 52.9465C86.8787 54.4435 92.9015 55.7495 99.1457 55.8153C113.817 55.8153 123.414 48.5683 123.459 37.3455ZM159.909 54.9718H172.825L161.551 0.986542H149.63C146.949 0.986542 144.688 2.54737 143.687 4.94711L122.731 54.9709H137.395L140.307 46.9067H158.224L159.91 54.9709L159.909 54.9718ZM144.327 35.8432L151.677 15.574L155.908 35.8432H144.328H144.327ZM85.5717 0.986542L74.024 54.9709H60.0594L71.6116 0.986542H85.5717Z"
+        fill="#1434CB"
+      />
+    </svg>
+  </div>
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-header">About Visa</div>
+      <div class="footer-link">Leading by Example</div>
+      <div class="footer-link">What We Go</div>
+      <div class="footer-link">Careers</div>
+    </div>
+
+    <div class="footer-column">
+      <div class="footer-header">Our Values</div>
+      <div class="footer-link">Social Impact</div>
+      <div class="footer-link">Inclusion + Diversity</div>
+    </div>
+
+    <div class="footer-column">
+      <div class="footer-header">News & Media</div>
+      <div class="footer-link">Visa Blog</div>
+      <div class="footer-link">Newsroom</div>
+    </div>
+  </div>
+</div> -->
