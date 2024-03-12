@@ -265,7 +265,7 @@
             const uuid = url.searchParams.get('uuid');
             const deviceID = url.searchParams.get('deviceID');
 
-            const wildfireOffers = new window['WildfireOffers']({
+            wildfireOffers = new window['WildfireOffers']({
               appID,
               uuid,
               deviceID,
