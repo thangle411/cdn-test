@@ -12815,7 +12815,7 @@ function print() { __p += __j.call(arguments, '') }
         justifyContent: 'center',
         alignItems: 'center',
       },
-      name: { wordBreak: 'break-all', padding: '0 15px' },
+      name: { wordBreak: 'break-all', padding: '0 15px', fontSize: '14px' },
       earnings: { color: Xe.BLACK, fontSize: '14px', fontWeight: 700, lineHeight: '21px' },
       helpButton: { position: 'absolute', top: '4px', right: '4px' },
     },
