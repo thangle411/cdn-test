@@ -31186,7 +31186,10 @@ in production environments.
         const o = this.store.getMetaData().appID;
         let u = this.cache.getCachedBackfillOffers();
         if (!(u != null && u.generic) || !(u != null && u.priority)) {
-          if (((u = await YC(`https://dev-www.wildlink.me/labs/data/${o}/offer-showcase-backfill/1`)), !u))
+          if (
+            ((u = await YC(`https://dev-www.wildlink.me/labs/data/${o}/offer-showcase-backfill/1`)),
+            !(u != null && u.generic) || !(u != null && u.priority))
+          )
             throw new Error('No rates return from api call');
           this.cache.cacheBackfilOffers(u);
         }
