@@ -19986,8 +19986,11 @@ in production environments.
       try {
         const t = this.store.getMetaData().appID;
         let n = this.cache.getCachedBackfillOffers();
-        if (!n) {
-          if (((n = await Bp(`https://dev-www.wildlink.me/labs/data/${t}/offer-showcase-backfill/1`)), !n))
+        if (!(n != null && n.generic) || !(n != null && n.priority)) {
+          if (
+            ((n = await Bp(`https://dev-www.wildlink.me/labs/data/${t}/offer-showcase-backfill/1`)),
+            !(n != null && n.generic) || !(n != null && n.priority))
+          )
             throw new Error('No rates return from api call');
           this.cache.cacheBackfilOffers(n);
         }
